@@ -1,4 +1,5 @@
 # Sorted & unsorted array
+# Returns index values
 def two_Sum(nums, target):
     seen = {}
 
@@ -13,4 +14,14 @@ def two_Sum(nums, target):
 print(two_Sum([2,7,11,15],9))
 
 
+# Returns elements
+def twoSum(nums, target):
+    seen = set()
+    for i in range(len(nums)):
+        need = target - nums[i]
+        if need in seen:
+            return [need,nums[i]]
 
+        seen.add(nums[i])
+        
+print(twoSum([2,7,11,15],9))
