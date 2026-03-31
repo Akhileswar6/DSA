@@ -1,6 +1,5 @@
 def twoSum(nums, target):
-    left = 0
-    right = len(nums) - 1
+    left, right = 0, len(nums) - 1
 
     while left < right:
         s = nums[left] + nums[right]
@@ -11,6 +10,7 @@ def twoSum(nums, target):
             right -= 1
         else:
             return [left + 1, right + 1]
-
-print(twoSum([2,7,11,15],9))
-
+        
+print(twoSum([2,3,5,7],12))
+    
+    
