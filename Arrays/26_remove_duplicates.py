@@ -8,4 +8,4 @@ def removeDuplicates(nums):
 
     return k           
     
-print(removeDuplicates([0,1,1,2,3,3,3,4,4,9,12]))
+print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
