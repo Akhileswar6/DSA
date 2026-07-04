@@ -1,3 +1,6 @@
+# Input  = 1 -> 2 -> 3 -> 4 -> 5
+# Output = 5 -> 4 -> 3 -> 2 -> 1
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -11,6 +14,6 @@ class Solution:
             nxt = curr.next
             curr.next = prev
             prev = curr
-            curr = nxt  
+            curr = nxt
 
-        return prev    
+        return prev
