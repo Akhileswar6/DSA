@@ -1,5 +1,5 @@
-# Sorted & unsorted array
-# Returns index values
+# # Sorted & unsorted array
+# # Returns index values
 def two_Sum(nums, target):
     seen = {}
 
@@ -15,7 +15,7 @@ print(two_Sum([2,7,11,15],9))
 
 
 
-# Returns elements
+# # Returns elements
 def twoSum(nums, target):
     seen = set()
     for i in range(len(nums)):
@@ -30,13 +30,16 @@ print(twoSum([2,7,11,15],9))
 
 
 
-# Brute Force
-def twoSum(nums, target):
-    for i in range(len(nums)):
-        for j in range(i + 1, len(nums)):
-            if nums[i] + nums[j] == target:
-                return [i,j]
-            
-print(twoSum([2,7,11,15],9))
+def twoSum(nums, k):
+    left, right = 0, len(nums) - 1
 
+    while left < right:
+        total = nums[left] + nums[right]
+        if total < k:
+            left += 1
+        elif total > k:
+            right -= 1
+        else:
+            return left, right
 
+print(twoSum([7,9,12,15,18,20], 30))
