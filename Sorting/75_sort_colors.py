@@ -3,12 +3,12 @@ def sortColors(nums):
 
         while mid <= high:
             if nums[mid] == 0:
-                nums[low], nums[mid] = nums[mid], nums[low]
+                nums[mid], nums[low] = nums[low], nums[mid]
                 low += 1
                 mid += 1
 
             elif nums[mid] == 1:
-                mid += 1
+                 mid += 1
 
             else:
                 nums[mid], nums[high] = nums[high], nums[mid]
