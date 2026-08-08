@@ -7,5 +7,6 @@ def removeAdjacent(s):
             stack.append(ch)
 
     return "".join(stack)
+    
 
 print(removeAdjacent("abbaca"))

@@ -4,12 +4,12 @@ def backSpaceCompare(s, t):
         for ch in string:
             if ch != "#":
                 stack.append(ch)
-            elif stack:
+            else:
                 stack.pop()
 
         return "".join(stack)
 
     return build(s) == build(t)
-
+    
 
 print(backSpaceCompare('ab#c', "ad#c"))
