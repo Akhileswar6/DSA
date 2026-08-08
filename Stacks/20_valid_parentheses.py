@@ -1,13 +1,13 @@
 def isValid(s):
     stack = []
     pairs = {
-        ')':'(',
-        ']':'[',
-        '}':'{'
-             }
+        ')' : '(',
+        ']' : '[',
+        '}' : '{'
+    }    
 
     for ch in s:
-        if ch in "{[(":
+        if ch in "([{":
             stack.append(ch)
         else:
             if not stack or stack[-1] != pairs[ch]:
@@ -16,6 +16,6 @@ def isValid(s):
 
     return len(stack) == 0
 
-print(isValid("()[]{}"))
+print(isValid("([{}])"))
 
     

@@ -16,5 +16,6 @@ def calPoints(operations):
         res += i
 
     return res
+    
 
 print(calPoints(["5","2","C","D","+"]))
